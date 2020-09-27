@@ -25,6 +25,7 @@
                 <tb><%= attachment_image_tag @user, :image,  :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></tb>
                 <tb><%= @book.title %></tb>
                 <tb><%= @book.body %></tb>
+                
                 <% if current_user.id == @user.id %>
                 <tb><%= link_to "Edit", edit_book_path(@book.id)%></tb>
                 <tb><%= link_to 'destroy', book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?"%></tb>

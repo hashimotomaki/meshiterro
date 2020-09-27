@@ -24,24 +24,24 @@
 
       <h2>New book</h2>
 
-          <% if book.errors.any? %>
+        <% if book.errors.any? %>
         　<div id="error_explanation" class="alert alert-danger">
          　<ul>
-         　<% @book.errors.full_messages.each do |message| %>
-           　<li><%= message + "error" %></li>
-         　<% end %>
+         　  <% book.errors.full_messages.each do |message| %>
+            　<li><%= message + "error" %></li>
+         　  <% end %>
          　 </ul>
         　</div>
-         <% end %>
+        <% end %>
 
-         <%= form_with model:book, url:'/books', local: true do |f| %>
-          <div class="book_title">Title</div>
-            <%= f.text_field :title %>
+        <%= form_with model:book, url:'/books', local: true do |f| %>
+           <div class="book_title">Title</div>
+             <%= f.text_field :title %>
 
-          <div class="book_body">Opinion</div>
-            <%= f.text_field :body %>
+           <div class="book_body">Opinion</div>
+             <%= f.text_field :body %>
 
-          <div class="actions row"></div>
-            <%= f.submit "Create Book" %>
-         <% end %>
+           <div class="actions row"></div>
+             <%= f.submit "Create Book" %>
+        <% end %>
 </div>
