@@ -1,0 +1,37 @@
+
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-3">
+
+    <%= render 'books/info', book: @book, user: @user %>
+    </div>
+    <div class="main">
+     <div class="col-xs-9">
+      <h2>Books</h2>
+
+      
+        <table class="table table-hover table-inverse">
+         <thead>
+          <tr>
+            <th>Title</th>
+            <th>Opinion</th>
+            <th colspan="3"></th>
+          </tr>
+         </thead>
+
+       <%  @books.each  do |f| %>
+        <table class="table table-hover table-inverse">
+          <tbody>
+           <tr>
+             <tb><%= link_to user_path(f.user) do %>
+             <%= attachment_image_tag f.user, :image,  :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+             <% end %></tb>
+             <tb><%= f.title  %></tb>
+             <tb><%= f.body %></tb>
+           </tr>
+          </tbody>
+       <% end %>
+     </div>
+    </div>
+  </div>
+</div>
