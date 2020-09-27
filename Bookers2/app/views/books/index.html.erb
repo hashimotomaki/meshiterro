@@ -9,7 +9,7 @@
      <div class="col-xs-9">
       <h2>Books</h2>
 
-      
+
         <table class="table table-hover table-inverse">
          <thead>
           <tr>
@@ -26,7 +26,7 @@
              <tb><%= link_to user_path(f.user) do %>
              <%= attachment_image_tag f.user, :image,  :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
              <% end %></tb>
-             <tb><%= f.title  %></tb>
+             <tb><%= link_to book_path(f.id) do %><%= f.title %></tb><% end %></tb>
              <tb><%= f.body %></tb>
            </tr>
           </tbody>

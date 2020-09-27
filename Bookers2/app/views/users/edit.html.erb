@@ -4,6 +4,16 @@
 
 <h2>User info</h2>
 
+ <% if @user.errors.any? %>
+   <div id="error_explanation" class="alert alert-danger">
+    <ul>
+     <% @user.errors.full_messages.each do |message| %>
+      <li><%= message + "error" %></li>
+     <% end %>
+    </ul>
+   </div>
+ <% end %>
+
  <div class="main">
   <div class="row">
    <div class="filed">
