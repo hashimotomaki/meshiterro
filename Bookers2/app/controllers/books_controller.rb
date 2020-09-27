@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
 
-  before_action :ensure_correct_user, {only: [:edit, :update]}
+  before_action :ensure_correct_user, {only: [:edit, :update,:destroy
+  ]}
 
   def new
     @book = Book.new
@@ -30,6 +31,7 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
+    @user = @book.user
   end
 
   def update
