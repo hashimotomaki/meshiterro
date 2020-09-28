@@ -23,6 +23,7 @@
             <thead>
               <tr>
                 <tb><%= attachment_image_tag @user, :profile_image,  :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></tb>
+                <tb><%= link_to user_path(@user.id) do %><%= @user.name %><% end %></tb>
                 <tb><%= @book.title %></tb>
                 <tb><%= @book.body %></tb>
 
