@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :books, dependent: :destroy
-  attachment :image # _idは不要
+  attachment :profile_image # _idは不要
 
   validates :name, presence: true, length: {in: 2..20 }
   validates :email, presence: true

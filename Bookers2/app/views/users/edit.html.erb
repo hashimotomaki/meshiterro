@@ -13,7 +13,7 @@
     </ul>
    </div>
  <% end %>
- 
+
  <div class="main">
   <div class="row">
    <div class="filed">
@@ -23,9 +23,9 @@
             <h4>Name</h4>
             <%= f.text_field :name%>
             <h4>Image</h4>
-            <%= f.text_field :image %>
-            <%= attachment_image_tag @user, :image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%>
-            <%= f.attachment_field :image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+            <%= f.text_field :profile_image %>
+            <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%>
+            <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
             <h4>Introduction</h4>
             <%= f.text_area :Introduction %>
             <%= f.submit 'Update Usesr' %>

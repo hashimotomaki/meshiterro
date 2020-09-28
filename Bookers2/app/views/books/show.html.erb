@@ -22,7 +22,7 @@
          <table class="table table-hover table-inverse">
             <thead>
               <tr>
-                <tb><%= attachment_image_tag @user, :image,  :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></tb>
+                <tb><%= attachment_image_tag @user, :profile_image,  :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></tb>
                 <tb><%= @book.title %></tb>
                 <tb><%= @book.body %></tb>
 
