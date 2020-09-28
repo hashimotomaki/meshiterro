@@ -28,7 +28,7 @@
 
                 <% if @book.user_id == current_user.id %>
                 <tb><%= link_to "Edit", edit_book_path(@book.id)%></tb>
-                <tb><%= link_to "destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?"%></tb>
+                <tb><%= link_to 'Destroy', book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?"%></tb>
                 <% end %>
               </tr>
             </thead>
